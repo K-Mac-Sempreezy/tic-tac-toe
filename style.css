@@ -1,0 +1,179 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  /* font-family: 'Amatic SC', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Pacifico', cursive; */
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Monoton', cursive;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  border: 15px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/JPG/aaron-burden-qJrg0ANseFE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.overlay  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+form {
+  height: 300px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px;
+  margin: 0 30px 150px 30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+}
+
+input[type="text"] {
+  border: none;
+  height: 36px;
+  padding: 12px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+input[type="submit"] {
+  max-width: 100px;
+  padding: 5px;
+}
+
+input[type="text"]::placeholder {
+  color: rgb(104, 153, 161);
+}
+
+label {
+  color: rgb(1, 66, 77);
+  font-family: 'Amatic SC', cursive;
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  max-width: 200px;
+}
+
+.inactive {
+  color: rgba(1, 66, 77, 0.335);
+}
+
+h1 {
+  color:rgb(94, 204, 255);
+  margin-bottom: 10px;
+  font-size: 64px;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.5),   0 0 8px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+p {
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(1, 66, 77);
+  visibility: hidden;
+}
+
+button {
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 5px 40px;
+  margin-bottom: 20px;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(0, 152, 179, 0.585);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05), 10px 10px 25px rgba(0, 0, 0, 0.06);
+  visibility: visible;
+}
+
+button:hover {
+  background-color: rgba(0, 152, 179, 0.985);
+}
+
+.container {
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05), 10px 10px 25px rgba(0, 0, 0, 0.06), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 20px rgba(0, 0, 0, 0.307), -5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  height: 421px;
+  width: 421px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.square {
+  font-family: 'Monoton', cursive;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 112px;
+  overflow: hidden;
+  color: white;
+  background-color: rgba(0, 132, 255, 0.25);
+}
+
+.square_hover:hover {
+  background-color: rgba(0, 132, 255, 0.15);
+}
