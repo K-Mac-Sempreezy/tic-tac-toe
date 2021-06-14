@@ -46,8 +46,8 @@ const gameBoard = (() => {
     displayController.submitNames();
   };
 
-  const passResult = (val) => {
-    return val ? (gameOver = true) : (gameOver = false);
+  const passResult = () => {
+    gameOver = true;
   };
 
   const resetBoard = () => {
@@ -131,11 +131,10 @@ const game = (() => {
   const alertResult = () => {
     if (winner) {
       displayController.displayWin();
-      gameBoard.passResult(winner);
     } else if (tie) {
       displayController.displayTie();
-      gameBoard.passResult(tie);
     }
+    gameBoard.passResult();
     displayController.playAgain();
   };
 
